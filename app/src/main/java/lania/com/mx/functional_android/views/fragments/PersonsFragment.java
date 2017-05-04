@@ -41,7 +41,7 @@ public class PersonsFragment extends Fragment {
     }
 
     private void displayPersons(View rootView) {
-        final RecyclerView addonsRecyclerView = (RecyclerView) rootView.findViewById(R.id.personsRecyclerView);
+        final RecyclerView personsRecyclerView = (RecyclerView) rootView.findViewById(R.id.personsRecyclerView);
 
         PersonRepository repository = new InMemoryPersonRepository();
         List<Person> persons = repository.getAll();
@@ -49,12 +49,12 @@ public class PersonsFragment extends Fragment {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(),
                 LinearLayoutManager.VERTICAL, false);
         linearLayoutManager.setAutoMeasureEnabled(true);
-        addonsRecyclerView.setNestedScrollingEnabled(false);
-        addonsRecyclerView.setAdapter(adapter);
-        addonsRecyclerView.setLayoutManager(linearLayoutManager);
-        addonsRecyclerView.setHasFixedSize(true);
+        personsRecyclerView.setNestedScrollingEnabled(false);
+        personsRecyclerView.setAdapter(adapter);
+        personsRecyclerView.setLayoutManager(linearLayoutManager);
+        personsRecyclerView.setHasFixedSize(true);
 
         RecyclerView.ItemDecoration dividerItemDecoration = new DividerItemDecoration(getContext(), linearLayoutManager.getOrientation());
-        addonsRecyclerView.addItemDecoration(dividerItemDecoration);
+        personsRecyclerView.addItemDecoration(dividerItemDecoration);
     }
 }
