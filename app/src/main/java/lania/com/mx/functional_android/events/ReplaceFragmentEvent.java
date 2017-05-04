@@ -1,4 +1,4 @@
-package lania.com.mx.functional_android;
+package lania.com.mx.functional_android.events;
 
 import android.support.v4.app.Fragment;
 import android.view.View;

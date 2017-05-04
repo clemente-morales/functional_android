@@ -1,4 +1,4 @@
-package lania.com.mx.functional_android.domain;
+package lania.com.mx.functional_android.models;
 
 /**
  * Created by moracl6 on 5/3/2017.

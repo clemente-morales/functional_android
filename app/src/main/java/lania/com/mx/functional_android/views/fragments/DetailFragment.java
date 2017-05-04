@@ -1,4 +1,4 @@
-package lania.com.mx.functional_android;
+package lania.com.mx.functional_android.views.fragments;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
@@ -16,6 +16,8 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
+
+import lania.com.mx.functional_android.R;
 
 /**
  * @author Clemente Morales Fernandez

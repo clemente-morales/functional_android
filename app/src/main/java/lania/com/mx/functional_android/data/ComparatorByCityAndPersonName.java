@@ -2,7 +2,7 @@ package lania.com.mx.functional_android.data;
 
 import java.util.Comparator;
 
-import lania.com.mx.functional_android.domain.Person;
+import lania.com.mx.functional_android.models.Person;
 
 /**
  * Created by moracl6 on 5/3/2017.

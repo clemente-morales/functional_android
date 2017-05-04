@@ -1,4 +1,4 @@
-package lania.com.mx.functional_android.domain;
+package lania.com.mx.functional_android.models;
 
 import java.util.List;
 

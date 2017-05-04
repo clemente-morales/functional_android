@@ -1,4 +1,4 @@
-package lania.com.mx.functional_android;
+package lania.com.mx.functional_android.views.activities;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -12,6 +12,11 @@ import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.Map;
 
+import lania.com.mx.functional_android.views.fragments.HomeFragment;
+import lania.com.mx.functional_android.R;
+import lania.com.mx.functional_android.events.ReplaceFragmentEvent;
+import lania.com.mx.functional_android.views.fragments.PersonsFragment;
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -21,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         if (savedInstanceState == null)
-            displayFragment(HomeFragment.newInstance(), false, null);
+            displayFragment(PersonsFragment.newInstance(), false, null);
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)

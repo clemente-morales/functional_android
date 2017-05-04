@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import lania.com.mx.functional_android.domain.City;
-import lania.com.mx.functional_android.domain.Person;
-import lania.com.mx.functional_android.domain.PersonRepository;
+import lania.com.mx.functional_android.models.City;
+import lania.com.mx.functional_android.models.Person;
+import lania.com.mx.functional_android.models.PersonRepository;
 
 /**
  * Created by moracl6 on 5/3/2017.
@@ -26,7 +26,7 @@ public class InMemoryPersonRepository implements PersonRepository {
 
     @Override
     public List<Person> getAll() {
-        List<Person> allPersons = Collections.unmodifiableList(persons);
+        List<Person> allPersons = new ArrayList<>(persons);
         Collections.sort(allPersons, new ComparatorByCityAndPersonName());
 
         return allPersons;

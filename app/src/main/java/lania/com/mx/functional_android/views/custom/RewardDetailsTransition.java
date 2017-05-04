@@ -1,4 +1,4 @@
-package lania.com.mx.functional_android;
+package lania.com.mx.functional_android.views.custom;
 
 import android.annotation.TargetApi;
 import android.content.Context;

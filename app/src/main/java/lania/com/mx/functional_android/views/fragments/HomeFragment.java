@@ -1,4 +1,4 @@
-package lania.com.mx.functional_android;
+package lania.com.mx.functional_android.views.fragments;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -17,6 +17,11 @@ import org.greenrobot.eventbus.EventBus;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import lania.com.mx.functional_android.R;
+import lania.com.mx.functional_android.events.ReplaceFragmentEvent;
+import lania.com.mx.functional_android.views.custom.RewardDetailsTransition;
+import lania.com.mx.functional_android.views.custom.RoundCornersTransformation;
 
 /**
  * @author Clemente Morales Fernandez
