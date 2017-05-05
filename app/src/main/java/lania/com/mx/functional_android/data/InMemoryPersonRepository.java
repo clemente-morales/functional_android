@@ -3,6 +3,7 @@ package lania.com.mx.functional_android.data;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.function.Predicate;
 
 import lania.com.mx.functional_android.models.City;
 import lania.com.mx.functional_android.models.Person;
@@ -30,5 +31,16 @@ public class InMemoryPersonRepository implements PersonRepository {
         Collections.sort(allPersons, new ComparatorByCityAndPersonName());
 
         return allPersons;
+    }
+
+    private void filterBrownEggs() {
+        String someDish = "Some brown eggs";
+        Predicate<String> eggs = s -> s.contains("egg");
+        Predicate<String> brown = s -> s.contains("brown");
+
+        Predicate<String> brownEggs = eggs.and(brown);
+        Predicate<String> otherEggs = eggs.and(brown.negate());
+
+        boolean eatingBrownEggs = brownEggs.test(someDish);
     }
 }

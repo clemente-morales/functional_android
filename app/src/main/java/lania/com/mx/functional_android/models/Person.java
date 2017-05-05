@@ -1,5 +1,9 @@
 package lania.com.mx.functional_android.models;
 
+import org.apache.commons.lang3.StringUtils;
+
+import java.util.function.Function;
+
 /**
  * Created by moracl6 on 5/3/2017.
  */
@@ -28,6 +32,12 @@ public class Person {
     }
 
     public String getFullName() {
-        return name + " " + lastName;
+        return concatValues(name, " ", lastName);
+    }
+
+    private String concatValues(String... values) {
+        // Function<String[], String> formatter = elements -> StringUtils.join(elements);
+        Function<String[], String> formatter = StringUtils::join;
+        return formatter.apply(values);
     }
 }
