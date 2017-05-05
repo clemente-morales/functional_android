@@ -32,12 +32,20 @@ public class Person {
     }
 
     public String getFullName() {
-        return concatValues(name, " ", lastName);
+        MultiParamFunction multiParamFunction = StringUtils::join;
+        return multiParamFunction.apply(name, " ", lastName);
+
+        // This is valid
+        // return concatValues(name, " ", lastName);
     }
 
     private String concatValues(String... values) {
         // Function<String[], String> formatter = elements -> StringUtils.join(elements);
         Function<String[], String> formatter = StringUtils::join;
         return formatter.apply(values);
+    }
+
+    private interface MultiParamFunction {
+        String apply(String... input);
     }
 }
